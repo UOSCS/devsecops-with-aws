@@ -8,10 +8,10 @@ RUN apt-get install -y tzdata
 
 RUN ./gradlew clean \
 	&& ./gradlew build -x test \
-	&& mv ./build/libs/*.jar ./app.jar
+	&& mv ./build/libs/*.war ./app.war
 
 EXPOSE 8080
 
 ENV TZ="Asia/Seoul"
 
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.war"]
