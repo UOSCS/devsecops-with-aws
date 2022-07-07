@@ -10,7 +10,7 @@ phases:
       - mv ./kubectl /usr/local/bin/kubectl
       - echo Generating kubeconfig...
       - mkdir ~/.kube
-      - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name cloud-l3-eks
+      - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $CLUSTER_NAME
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -27,6 +27,5 @@ phases:
   post_build:
     commands:
       - AWS_ECR_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:COMMIT_HASH
-      - echo Build completed on $DATE
       - sed -i.bak 's#AWS_ECR_URI#'"$AWS_ECR_URI"'#' ./deployment.yaml
       - kubectl apply -f ./deployment.yaml
