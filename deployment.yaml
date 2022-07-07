@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: sample-spring-backend
-          image: 291533180773.dkr.ecr.ap-southeast-2.amazonaws.com/sample-spring-backend:latest
+          image: AWS_ECR_URI
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
