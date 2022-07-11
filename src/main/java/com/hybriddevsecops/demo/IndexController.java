@@ -10,7 +10,7 @@ public class IndexController {
     @GetMapping("/")
     public String sayHello(Model model) {
 
-        model.addAttribute("hello", "Goodbye, World!");
+        model.addAttribute("title", "DevSecOps with AWS");
 
         return "index";
     }

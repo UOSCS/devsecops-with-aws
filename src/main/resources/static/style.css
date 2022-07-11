@@ -1,0 +1,24 @@
+.container {
+    margin: 100px;
+    text-align: center;
+}
+
+.content {
+    display: inline-block;
+    border: 1rem solid darkorange;
+}
+
+.img-box {
+    display: inline-block;
+    border: 0.6rem solid darkorange;
+    margin: 40px;
+}
+
+h1 {
+    font-size: xxx-large;
+    margin-top: 50px;
+}
+
+img {
+    margin: 20px;
+}

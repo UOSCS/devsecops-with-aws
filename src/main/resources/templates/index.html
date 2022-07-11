@@ -4,9 +4,36 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Hybrid DevSecOps Workshop</title>
 </head>
 <body>
-    <h1 th:text="${hello}" />
+    <div class="container">
+        <div class="content">
+            <h1 th:text="${title}" />
+            <div class="img-container">
+                <div class="img-box">
+                    <img src="eks.png">
+                    <h2>Amazon EKS</h2>
+                </div>
+                <div class="img-box">
+                    <img src="codeguru.png">
+                    <h2>Amazon CodeGuru</h2>
+                </div>
+                <div class="img-box">
+                    <img src="codepipeline.png">
+                    <h2>AWS CodePipeline</h2>
+                </div>
+                <div class="img-box">
+                    <img src="securityhub.png">
+                    <h2>AWS Security Hub</h2>
+                </div>
+                <div class="img-box">
+                    <img src="cloudwatch.png">
+                    <h2>Amazon CloudWatch</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
