@@ -26,7 +26,7 @@ public class IndexController {
 
         Logger LOG = Logger.getGlobal();
 
-        LOG.info(AWS_ACCESS_KEY);
-        LOG.info(AWS_SECRET_KEY);
+        LOG.info("AWS_ACCESS_KEY: " + AWS_ACCESS_KEY);
+        LOG.info("AWS_SECRET_KEY: " + AWS_SECRET_KEY);
     }
 }
