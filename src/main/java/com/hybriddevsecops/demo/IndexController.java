@@ -21,12 +21,12 @@ public class IndexController {
 
     public void triggerNonCompliance() {
 
-        String SAMPLE_ACCESS_KEY = "LX0GLCEUBRCR7947EE80";
-        String SAMPLE_SECRET_KEY = "AXaGWTSfZlHEnZ1PIzjuljceMF11rdz8cvd58=rS";
+        String AWS_ACCESS_KEY = "LX0GLCEUBRCR7947EE80";
+        String AWS_SECRET_KEY = "AXaGWTSfZlHEnZ1PIzjuljceMF11rdz8cvd58=rS";
 
         Logger LOG = Logger.getGlobal();
 
-        LOG.info(SAMPLE_ACCESS_KEY);
-        LOG.info(SAMPLE_SECRET_KEY);
+        LOG.info(AWS_ACCESS_KEY);
+        LOG.info(AWS_SECRET_KEY);
     }
 }
