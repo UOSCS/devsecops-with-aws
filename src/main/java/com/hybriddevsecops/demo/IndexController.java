@@ -8,10 +8,6 @@ import java.util.logging.Logger;
 
 @Controller
 public class IndexController {
-    
-    private final String SAMPLE_ACCESS_KEY = "ML686RDFZUWOHYHCQQTG";
-    
-    private final String SAMPLE_SECRET_KEY = "65goffb7GXeE1e/dTPVrEm26LHGvr3M4LoXg5/pj";
 
     @GetMapping("/")
     public String sayHello(Model model) {
