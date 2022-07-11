@@ -21,8 +21,8 @@ public class IndexController {
 
     public void triggerNonCompliance() {
 
-        String SAMPLE_ACCESS_KEY = "ML686RDFZUWOHYHCQQTG";
-        String SAMPLE_SECRET_KEY = "65goffb7GXeE1e/dTPVrEm26LHGvr3M4LoXg5/pj";
+        String SAMPLE_ACCESS_KEY = "LX0GLCEUBRCR7947EE80";
+        String SAMPLE_SECRET_KEY = "AXaGWTSfZlHEnZ1PIzjuljceMF11rdz8cvd58=rS";
 
         Logger LOG = Logger.getGlobal();
 
