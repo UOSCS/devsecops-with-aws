@@ -13,13 +13,13 @@ phases:
       - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $CLUSTER_NAME
   pre_build:
     commands:
-      - aws codeguru-reviewer create-code-review --name SAST --repository-association-arn arn:aws:codeguru-reviewer:ap-southeast-2:291533180773:association:042ebef3-a354-4558-b193-d23898b06c53 --type RepositoryAnalysis={RepositoryHead={BranchName=main}}
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 7)
+      - aws codeguru-reviewer create-code-review --name SAST:$COMMIT_HASH --repository-association-arn arn:aws:codeguru-reviewer:ap-southeast-2:291533180773:association:042ebef3-a354-4558-b193-d23898b06c53 --type RepositoryAnalysis={RepositoryHead={BranchName=main}}
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
   build:
     commands:
       - echo Building the Docker image...
-      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 7)
       - AWS_ECR_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_NAME:$COMMIT_HASH
       - docker build -t $AWS_ECR_URI .
       - docker push $AWS_ECR_URI
