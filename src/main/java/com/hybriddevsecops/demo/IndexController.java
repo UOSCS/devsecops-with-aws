@@ -3,7 +3,11 @@ package com.hybriddevsecops.demo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.services.secretsmanager.SecretsManagerClient;
+import software.amazon.awssdk.services.secretsmanager.model.*;
 
+import java.util.Base64;
 import java.util.logging.Logger;
 
 @Controller
