@@ -9,6 +9,7 @@ import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.secretsmanager.SecretsManagerClient;
 import software.amazon.awssdk.services.secretsmanager.model.*;
 
+import java.io.IOException;
 import java.util.Base64;
 import java.util.logging.Logger;
 
@@ -35,7 +36,11 @@ public class IndexController {
         LOG.info("AWS_ACCESS_KEY_ID: " + AWS_ACCESS_KEY_ID);
         LOG.info("AWS_SECRET_KEY: " + AWS_SECRET_KEY);
 
-//        JsonNode secretsJson  =  new ObjectMapper().readTree(secret);
+//        try {
+//            JsonNode secretsJson  =  new ObjectMapper().readTree(secret);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 //        String AWS_ACCESS_KEY_ID = secretsJson.get("AWS_ACCESS_KEY_ID").textValue();
 //        String AWS_SECRET_KEY = secretsJson.get("AWS_SECRET_KEY").textValue();
     }
