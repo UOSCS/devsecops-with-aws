@@ -1,5 +1,7 @@
 package com.hybriddevsecops.demo;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,12 +27,16 @@ public class IndexController {
 
     public void triggerNonCompliance() {
 
-        String AWS_ACCESS_KEY_ID = "LX0GLCEUBRCR7947EE80";
-        String AWS_SECRET_KEY = "AXaGWTSfZlHEnZ1PIzjuljceMF11rdz8cvd58=rS";
+         String AWS_ACCESS_KEY_ID = "LX0GLCEUBRCR7947EE80";
+         String AWS_SECRET_KEY = "AXaGWTSfZlHEnZ1PIzjuljceMF11rdz8cvd58=rS";
 
-        Logger LOG = Logger.getGlobal();
+         Logger LOG = Logger.getGlobal();
 
-        LOG.info("AWS_ACCESS_KEY_ID: " + AWS_ACCESS_KEY_ID);
-        LOG.info("AWS_SECRET_KEY: " + AWS_SECRET_KEY);
+         LOG.info("AWS_ACCESS_KEY_ID: " + AWS_ACCESS_KEY_ID);
+         LOG.info("AWS_SECRET_KEY: " + AWS_SECRET_KEY);
+
+//        JsonNode secretsJson  =  new ObjectMapper().readTree(secret);
+//        String AWS_ACCESS_KEY_ID = secretsJson.get("AWS_ACCESS_KEY_ID").textValue();
+//        String AWS_SECRET_KEY = secretsJson.get("AWS_SECRET_KEY").textValue();
     }
 }
