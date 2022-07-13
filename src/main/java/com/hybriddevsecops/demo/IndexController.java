@@ -36,8 +36,10 @@ public class IndexController {
         LOG.info("AWS_ACCESS_KEY_ID: " + AWS_ACCESS_KEY_ID);
         LOG.info("AWS_SECRET_KEY: " + AWS_SECRET_KEY);
 
+
+//        JsonNode secretsJson = null;
 //        try {
-//            JsonNode secretsJson  =  new ObjectMapper().readTree(secret);
+//            secretsJson  =  new ObjectMapper().readTree(secret);
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
