@@ -27,13 +27,13 @@ public class IndexController {
 
     public void triggerNonCompliance() {
 
-         String AWS_ACCESS_KEY_ID = "LX0GLCEUBRCR7947EE80";
-         String AWS_SECRET_KEY = "AXaGWTSfZlHEnZ1PIzjuljceMF11rdz8cvd58=rS";
+        String AWS_ACCESS_KEY_ID = "LX0GLCEUBRCR7947EE80";
+        String AWS_SECRET_KEY = "AXaGWTSfZlHEnZ1PIzjuljceMF11rdz8cvd58=rS";
 
-         Logger LOG = Logger.getGlobal();
+        Logger LOG = Logger.getGlobal();
 
-         LOG.info("AWS_ACCESS_KEY_ID: " + AWS_ACCESS_KEY_ID);
-         LOG.info("AWS_SECRET_KEY: " + AWS_SECRET_KEY);
+        LOG.info("AWS_ACCESS_KEY_ID: " + AWS_ACCESS_KEY_ID);
+        LOG.info("AWS_SECRET_KEY: " + AWS_SECRET_KEY);
 
 //        JsonNode secretsJson  =  new ObjectMapper().readTree(secret);
 //        String AWS_ACCESS_KEY_ID = secretsJson.get("AWS_ACCESS_KEY_ID").textValue();
